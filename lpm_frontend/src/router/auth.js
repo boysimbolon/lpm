@@ -5,7 +5,7 @@ export const useAuthStore = defineStore({
     id: "auth",
 
     state() {
-        const api = 'https://lpm.unai.edu';
+        const api = 'http://localhost:8000';
         return {
             accessToken: null,
             uid: null,

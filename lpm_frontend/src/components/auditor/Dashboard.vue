@@ -289,7 +289,7 @@ const files = (dokumen) => {
 const download = async (dokumen) => {
     if (confirm("File ini tidak dapat di preview, anda akan mendownload file tersebut!\n Ingin tetap mendownload?")) {
         try {
-            window.location.href = `https://lpm.unai.edu/files/${dokumen.file}`;
+            window.location.href = `${authStore.fileUrl}/${dokumen.file}`;
         } catch (error) {
             console.error('File corrupt', error);
         }

@@ -72,7 +72,7 @@ document.title = `Edit Profile | ${authStore.name}`;
 // Update User Method
 const updateUser = async () => {
     try {
-        await axios.put(`https://lpm.unai.edu/api/user/${authStore.uid}`,
+        await axios.put(`${authStore.url}/user/${authStore.uid}`,
             {
                 username: username.value,
                 passwordLama: passwordLama.value,

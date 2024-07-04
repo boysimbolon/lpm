@@ -97,7 +97,7 @@ async function onSubmit() {
     login.value = true;
     try {
         // Fetch CSRF token
-        await axios.get("https://lpm.unai.edu/sanctum/csrf-cookie");
+        await axios.get(`${authStore.api}/sanctum/csrf-cookie`);
 
         const response = await axios.post(`${authStore.url}/login`, {
             username: UserName.value,
